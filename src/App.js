@@ -135,7 +135,7 @@ function App() {
               onClick={() => filtrarProdutos(procura)}
               className="botao_pesquisar"
             >
-              Pesquisar
+              Pesquisar Categoria
             </button>
           </form>
         </div>
