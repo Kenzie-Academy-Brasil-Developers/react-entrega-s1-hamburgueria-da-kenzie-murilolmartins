@@ -74,6 +74,7 @@
 .box_descritivo {
   margin-left: 10px;
 }
+
 @media screen and (min-width: 800px) {
   .item {
     margin-left: 10px;
