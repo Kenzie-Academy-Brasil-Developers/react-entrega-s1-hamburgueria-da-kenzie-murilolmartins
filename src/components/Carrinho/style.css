@@ -94,6 +94,7 @@
   color: #bdbdbd;
   width: 51px;
   height: 15px;
+  cursor: pointer;
 }
 .box_preco {
   width: 92%;
