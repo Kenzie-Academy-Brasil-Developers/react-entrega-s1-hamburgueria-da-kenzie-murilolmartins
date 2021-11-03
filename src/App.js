@@ -108,8 +108,10 @@ function App() {
   }
   function adicionaCarrinho(id) {
     let adicionar = products.find((produto) => produto.id == id);
-    setCarrinho([...carrinho, adicionar]);
-    atualizarTotal([...carrinho, adicionar]);
+    if (!carrinho.includes(adicionar)) {
+      setCarrinho([...carrinho, adicionar]);
+      atualizarTotal([...carrinho, adicionar]);
+    }
   }
   function removerCarrinho(id) {
     let novoCarrinho = carrinho.filter((nuemro, index) => index !== id);
@@ -126,7 +128,7 @@ function App() {
           <form>
             <input
               type="text"
-              placeholder="Produto"
+              placeholder="Categoria"
               value={procura}
               onChange={(evt) => setProcura(evt.target.value)}
             />
@@ -135,7 +137,7 @@ function App() {
               onClick={() => filtrarProdutos(procura)}
               className="botao_pesquisar"
             >
-              Pesquisar Categoria
+              Pesquisar
             </button>
           </form>
         </div>
